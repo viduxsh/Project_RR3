@@ -21,102 +21,123 @@
                 transition: all 0.3s cubic-bezier(.25,.8,.25,1);
                 box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             }
-            .material-card:hover {
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-                transform: translateY(-4px);
+            @media (min-width: 768px) {
+                .material-card:hover {
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                    transform: translateY(-4px);
+                }
             }
         </style>
     </head>
-    <body class="text-slate-900 leading-relaxed">
-        <nav class="bg-[#0A192F] text-white p-5 sticky top-0 z-50 shadow-xl">
-            <div class="container mx-auto flex justify-between items-center">
+    <body class="text-slate-900 leading-relaxed antialiased">
+        <nav class="bg-[#0A192F] text-white p-4 md:p-5 sticky top-0 z-50 shadow-xl">
+            <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-blue-500 rounded flex items-center justify-center font-bold">RR3</div>
-                    <span class="text-xl font-bold tracking-tighter mono">PROJECT_RR3</span>
+                    <div class="w-9 h-9 bg-blue-500 rounded flex items-center justify-center font-bold text-sm">RR3</div>
+                    <span class="text-lg md:text-xl font-bold tracking-tighter mono">PROJECT_RR3</span>
                 </div>
-                <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-blue-300">
-                    <a href="https://viduxsh.github.io/website/" target="_blank" class="hover:text-white transition">Creator</a>
-                    <a href="https://github.com/viduxsh/Project_RR3/issues" target="_blank" class="hover:text-white transition">Report a Issue</a>
-                    <a href="https://github.com/viduxsh/Project_RR3" target="_blank" class="hover:text-white transition italic">GitHub_Repo</a>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-blue-300">
+                    <a href="https://viduxsh.github.io/website/" target="_blank" class="hover:text-white transition active:text-white">Creator</a>
+                    <a href="https://github.com/viduxsh/Project_RR3/issues" target="_blank" class="hover:text-white transition active:text-white">Report an Issue</a>
+                    <a href="https://github.com/viduxsh/Project_RR3" target="_blank" class="hover:text-white transition active:text-white italic">GitHub_Repo</a>
                 </div>
             </div>
         </nav>
-        <header class="hero-bg text-white py-32 px-4 shadow-inner">
+        <header class="hero-bg text-white py-16 md:py-32 px-4 md:px-8 shadow-inner">
             <div class="container mx-auto">
                 <div class="max-w-3xl">
-                    <div class="inline-block px-3 py-1 border border-blue-400 text-blue-400 text-xs font-bold mono mb-6">VERSION_ANDROID_STABLE</div>
-                    <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase tracking-tighter">
+                    <div class="inline-block px-2.5 py-0.5 border border-blue-400 text-blue-400 text-[10px] md:text-xs font-bold mono mb-4 md:mb-6">VERSION_ANDROID_STABLE: 14.0.1</div>
+                    <h2 class="text-4xl md:text-7xl font-bold mb-4 md:mb-6 leading-tight uppercase tracking-tighter">
                         Keep the Race <span class="text-blue-500 italic">Alive</span>.
                     </h2>
-                    <p class="text-xl text-blue-100/80 mb-10 max-w-xl font-light">
-                        Repository dedicated to preserving Real Racing 3. Access the files, follow the installation protocols, and hit the track.
+                    <p class="text-base md:text-xl text-blue-100/80 mb-8 md:mb-10 max-w-xl font-light">
+                        Repository dedicated to the preservation of the Android version of Real Racing 3, ensuring that this iconic mobile racing game remains accessible for future generations of players and enthusiasts.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#downloads" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-10 rounded shadow-lg transition-all uppercase text-sm tracking-widest">
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <a href="#downloads" class="w-full sm:w-auto text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 px-8 rounded shadow-lg transition-all uppercase text-xs md:text-sm tracking-widest active:scale-[0.98]">
                             Downloads
                         </a>
-                        <a href="#tutorial" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 py-4 px-10 rounded uppercase text-sm tracking-widest transition">
+                        <a href="#tutorial" class="w-full sm:w-auto text-center bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 py-3.5 px-8 rounded uppercase text-xs md:text-sm tracking-widest transition active:scale-[0.98]">
                             Tutorial
                         </a>
                     </div>
                 </div>
             </div>
         </header>
-        <main class="container mx-auto py-20 px-4">
-            <div class="grid lg:grid-cols-3 gap-8">
-                <section id="tutorial" class="lg:col-span-2 space-y-8">
-                    <div class="material-card p-10 border-l-8 border-blue-500">
-                        <h3 class="text-blue-600 font-bold uppercase tracking-tighter text-sm mb-6 mono">#01_Installation_Protocol</h3>
-                        <div class="space-y-4 text-slate-700">
-                            <div class="flex gap-4">
-                                <span class="font-bold text-blue-500">01.</span>
-                                <p>Download packages from the official mirrors listed in the download section.</p>
+        <main class="container mx-auto py-10 md:py-20 px-4 max-w-7xl">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <section id="tutorial" class="lg:col-span-2 space-y-6 md:space-y-8 order-2 lg:order-1">
+                    <div class="material-card p-5 md:p-10 border-l-4 md:border-l-8 border-blue-500">
+                        <h3 class="text-blue-600 font-bold uppercase tracking-tighter text-xs md:text-sm mb-6 mono">#01_Installation_Protocol</h3>
+                        <div class="space-y-5 md:space-y-6 text-slate-700 text-sm md:text-base">
+                            <div class="flex gap-3 md:gap-4 items-start">
+                                <span class="font-bold text-blue-500 mono bg-blue-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">01</span>
+                                <p class="pt-0.5">Download the game files <a href="#downloads" class="text-blue-600 underline font-semibold">Downloads</a>.</p>
                             </div>
-                            <div class="flex gap-4">
-                                <span class="font-bold text-blue-500">02.</span>
-                                <p>Install the APK. <strong>Important:</strong> open the game once to generate the folder structure, then close it immediately.</p>
+                            <div class="flex gap-3 md:gap-4 items-start">
+                                <span class="font-bold text-blue-500 mono bg-blue-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">02</span>
+                                <div class="pt-0.5">
+                                    <p>Install the APK. <strong>Important:</strong> open the game once to allow the system to generate the initial folder structure, then force close the application immediately.</p>
+                                </div>
                             </div>
-                            <div class="flex gap-4">
-                                <span class="font-bold text-blue-500">03.</span>
-                                <p>Move the game files to the directory: <code class="bg-slate-100 px-2 py-1 rounded text-pink-600 font-bold">Android/data/com.ea.games.r3_row/</code></p>
+                            <div class="flex gap-3 md:gap-4 items-start">
+                                <span class="font-bold text-blue-500 mono bg-blue-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">03</span>
+                                <div class="w-full min-w-0 pt-0.5">
+                                    <p>Use a file manager to move the entire game data folder extracted exactly to the following directory (respect the lowercase letters):</p>
+                                    <div class="relative mt-2">
+                                        <code class="block bg-slate-900 text-pink-400 p-3 md:p-4 rounded font-mono text-xs overflow-x-auto whitespace-pre-wrap break-all select-all cursor-pointer border border-slate-800" title="Seleziona tutto">Android/data/com.ea.games.r3_row/</code>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex gap-4">
-                                <span class="font-bold text-blue-500">04.</span>
-                                <p>Restart and verify data integrity. Note: Online functions are disabled.</p>
+                            <div class="flex gap-3 md:gap-4 items-start">
+                                <span class="font-bold text-blue-500 mono bg-blue-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">04</span>
+                                <div class="pt-0.5">
+                                    <p>Start the game to verify the integrity of the data.</p>
+                                    <p class="text-[11px] md:text-xs text-rose-600 font-semibold mt-1.5 uppercase tracking-wider">Note: Online features and the game cloud are permanently disabled.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="saves" class="material-card p-10 border-l-8 border-slate-400">
-                        <h3 class="text-slate-500 font-bold uppercase tracking-tighter text-sm mb-6 mono">#02_Save_Management</h3>
-                        <p class="mb-4 italic text-slate-500 text-sm">Prevent the loss of your progress:</p>
-                        <p class="text-slate-700">
-                            Your saves reside in:<br>
-                            <code class="block mt-2 bg-slate-100 p-3 rounded text-sm text-blue-700">Android/data/com.ea.games.r3_row/files/doc/</code>
+                    <div id="saves" class="material-card p-5 md:p-10 border-l-4 md:border-l-8 border-amber-500 bg-amber-50/20">
+                        <h3 class="text-amber-700 font-bold uppercase tracking-tighter text-xs md:text-sm mb-4 mono">#02_Save_Management</h3>
+                        <div class="bg-amber-500/10 border border-amber-500/20 p-3 md:p-4 rounded mb-4">
+                            <p class="text-[10px] md:text-xs text-amber-800 font-bold uppercase tracking-wider">Loss data risk</p>
+                            <p class="text-xs md:text-sm text-slate-700 mt-1">Without cloud synchronization, your progress is stored exclusively on the device. If you delete the data or the application, you will lose everything in an irreversible manner.</p>
+                        </div>
+                        <p class="text-slate-700 text-xs md:text-sm">
+                            Your local saves are located within the <code class="bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-mono text-xs">doc</code> folder in the path:
                         </p>
+                        <div class="relative mt-2">
+                            <code class="block bg-slate-900 text-amber-400 p-3 md:p-4 rounded font-mono text-xs overflow-x-auto whitespace-pre-wrap break-all select-all cursor-pointer border border-slate-800" title="Seleziona tutto">Android/data/com.ea.games.r3_row/files/doc/</code>
+                        </div>
                     </div>
                 </section>
-                <aside id="downloads" class="space-y-6">
-                    <div class="material-card p-8 bg-[#0A192F] text-white">
-                        <h3 class="text-blue-400 font-bold uppercase tracking-tighter text-sm mb-8 mono">Secure_Mirrors</h3>
+                <aside id="downloads" class="space-y-6 order-1 lg:order-2">
+                    <div class="material-card p-5 md:p-8 bg-[#0A192F] text-white">
+                        <h3 class="text-blue-400 font-bold uppercase tracking-tighter text-xs md:text-sm mb-6 mono">Secure_Mirrors</h3>
                         <div class="space-y-4">
-                            <a href="https://mega.nz/folder/ci511SyD#4rj3q6uPrEiv5tBo2pg5Yw" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group">
-                                <span>Mega.nz</span>
-                                <span class="text-xs opacity-0 group-hover:opacity-100">DOWNLOAD</span>
-                            </a>
+                            <div>
+                                <a href="https://mega.nz/folder/ci511SyD#4rj3q6uPrEiv5tBo2pg5Yw" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group active:bg-blue-600">
+                                    <span class="font-medium text-sm md:text-base">Mega.nz (Primary)</span>
+                                    <span class="text-[10px] md:text-xs font-bold tracking-wider opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity bg-blue-500 lg:bg-transparent px-2 py-1 lg:p-0 rounded">DOWNLOAD</span>
+                                </a>
+                                <div class="mt-2 px-1 text-[9px] md:text-[10px] font-mono text-slate-400 break-all" title="SHA-256 Checksum">
+                                    5947 folders, 38809 files
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-10 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded">
-                            <p class="text-[10px] text-yellow-200 uppercase font-bold">Storage Notice</p>
-                            <p class="text-[11px] text-yellow-100/60 mt-1">These files are provided for preservation purposes. The author is not liable for improper use.</p>
+                        <div class="mt-8 md:mt-10 p-3 md:p-4 bg-yellow-500/10 border border-yellow-500/20 rounded">
+                            <p class="text-[9px] md:text-[10px] text-yellow-200 uppercase font-bold tracking-wider">Storage Notice</p>
+                            <p class="text-[10px] md:text-[11px] text-yellow-100/60 mt-1">These files are provided exclusively for historical preservation and research purposes. The author assumes no responsibility for improper use.</p>
                         </div>
                     </div>
                 </aside>
+
             </div>
         </main>
-        <footer class="bg-white border-t border-slate-200 py-12 px-4">
+        <footer class="bg-white border-t border-slate-200 py-8 md:py-12 px-4">
             <div class="container mx-auto text-center">
-                <div class="mb-6 opacity-30 grayscale">
-                    </div>
-                <p class="text-slate-400 text-xs mono uppercase tracking-widest">
+                <p class="text-slate-400 text-[10px] md:text-xs mono uppercase tracking-widest">
                     &copy; 2026 Project_RR3
                 </p>
             </div>
