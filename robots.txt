@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viduxsh.github.io/Project_RR3/sitemap.xml
