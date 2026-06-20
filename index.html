@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,10 +38,19 @@
                     <div class="w-9 h-9 bg-blue-500 rounded flex items-center justify-center font-bold text-sm">RR3</div>
                     <span class="text-lg md:text-xl font-bold tracking-tighter mono">PROJECT_RR3</span>
                 </div>
-                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-blue-300">
-                    <a href="https://viduxsh.github.io/website/" target="_blank" class="hover:text-white transition active:text-white">Creator</a>
-                    <a href="https://github.com/viduxsh/Project_RR3/issues" target="_blank" class="hover:text-white transition active:text-white">Report an Issue</a>
-                    <a href="https://github.com/viduxsh/Project_RR3" target="_blank" class="hover:text-white transition active:text-white italic">GitHub_Repo</a>
+                <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+                    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[11px] font-bold uppercase tracking-widest text-blue-300">
+                        <a href="https://viduxsh.github.io/website/" target="_blank" class="hover:text-white transition active:text-white" data-i18n="nav-creator">Creator</a>
+                        <a href="https://github.com/viduxsh/Project_RR3/issues" target="_blank" class="hover:text-white transition active:text-white" data-i18n="nav-report">Report an Issue</a>
+                        <a href="https://github.com/viduxsh/Project_RR3" target="_blank" class="hover:text-white transition active:text-white italic">GitHub_Repo</a>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-white/5 border border-white/10 rounded px-2 py-1 text-xs font-mono">
+                        <button onclick="switchLanguage('en')" id="lang-en" class="hover:text-blue-400 transition px-1 py-0.5 rounded focus:outline-none">🇬🇧 EN</button>
+                        <span class="text-white/20">|</span>
+                        <button onclick="switchLanguage('it')" id="lang-it" class="hover:text-blue-400 transition px-1 py-0.5 rounded focus:outline-none">🇮🇹 IT</button>
+                        <span class="text-white/20">|</span>
+                        <button onclick="switchLanguage('es')" id="lang-es" class="hover:text-blue-400 transition px-1 py-0.5 rounded focus:outline-none">🇪🇸 ES</button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -49,17 +58,17 @@
             <div class="container mx-auto">
                 <div class="max-w-3xl">
                     <div class="inline-block px-2.5 py-0.5 border border-blue-400 text-blue-400 text-[10px] md:text-xs font-bold mono mb-4 md:mb-6">VERSION_ANDROID_STABLE: 14.0.1</div>
-                    <h2 class="text-4xl md:text-7xl font-bold mb-4 md:mb-6 leading-tight uppercase tracking-tighter">
+                    <h2 class="text-4xl md:text-7xl font-bold mb-4 md:mb-6 leading-tight uppercase tracking-tighter" id="hero-title">
                         Keep the Race <span class="text-blue-500 italic">Alive</span>.
                     </h2>
-                    <p class="text-base md:text-xl text-blue-100/80 mb-8 md:mb-10 max-w-xl font-light">
+                    <p class="text-base md:text-xl text-blue-100/80 mb-8 md:mb-10 max-w-xl font-light" data-i18n="hero-desc">
                         Repository dedicated to the preservation of the Android version of Real Racing 3, ensuring that this iconic mobile racing game remains accessible for future generations of players and enthusiasts.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                        <a href="#downloads" class="w-full sm:w-auto text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 px-8 rounded shadow-lg transition-all uppercase text-xs md:text-sm tracking-widest active:scale-[0.98]">
+                        <a href="#downloads" class="w-full sm:w-auto text-center bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 px-8 rounded shadow-lg transition-all uppercase text-xs md:text-sm tracking-widest active:scale-[0.98]" data-i18n="btn-downloads">
                             Downloads
                         </a>
-                        <a href="#tutorial" class="w-full sm:w-auto text-center bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 py-3.5 px-8 rounded uppercase text-xs md:text-sm tracking-widest transition active:scale-[0.98]">
+                        <a href="#tutorial" class="w-full sm:w-auto text-center bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 py-3.5 px-8 rounded uppercase text-xs md:text-sm tracking-widest transition active:scale-[0.98]" data-i18n="btn-tutorial">
                             Tutorial
                         </a>
                     </div>
@@ -70,82 +79,290 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <section id="tutorial" class="lg:col-span-2 space-y-6 md:space-y-8 order-2 lg:order-1">
                     <div class="material-card p-5 md:p-10 border-l-4 md:border-l-8 border-blue-500">
-                        <h3 class="text-blue-600 font-bold uppercase tracking-tighter text-xs md:text-sm mb-6 mono">#01_Installation_Protocol</h3>
+                        <h3 class="text-blue-600 font-bold uppercase tracking-tighter text-xs md:text-sm mb-6 mono" data-i18n="section-installation">#01_Installation_Protocol</h3>
                         <div class="space-y-5 md:space-y-6 text-slate-700 text-sm md:text-base">
                             <div class="flex gap-3 md:gap-4 items-start">
                                 <span class="font-bold text-blue-500 mono bg-blue-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">01</span>
-                                <p class="pt-0.5">Download the game files <a href="#downloads" class="text-blue-600 underline font-semibold">Downloads</a>.</p>
+                                <div class="pt-0.5">
+                                    <p id="step-1-text">Download the game files <a href="#downloads" class="text-blue-600 underline font-semibold">Downloads</a> (Adreno or Mali).</p>
+                                    <p class="text-[11px] md:text-xs text-rose-600 font-semibold mt-1.5 uppercase tracking-wider" data-i18n="step-1-note">Note: check you device GPU by using software (AIDA64) or hardware specifications.</p>
+                                </div>
                             </div>
                             <div class="flex gap-3 md:gap-4 items-start">
                                 <span class="font-bold text-blue-500 mono bg-blue-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">02</span>
                                 <div class="pt-0.5">
-                                    <p>Install the APK. <strong>Important:</strong> open the game once to allow the system to generate the initial folder structure, then force close the application immediately.</p>
+                                    <p data-i18n="step-2-text">Install the APK. <strong>Important:</strong> open the game once to allow the system to generate the initial folder structure, then force close the application immediately.</p>
                                 </div>
                             </div>
                             <div class="flex gap-3 md:gap-4 items-start">
                                 <span class="font-bold text-blue-500 mono bg-blue-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">03</span>
                                 <div class="w-full min-w-0 pt-0.5">
-                                    <p>Use a file manager to move the entire game data folder extracted exactly to the following directory (respect the lowercase letters):</p>
+                                    <p data-i18n="step-3-text">Use a file manager to move the entire game data folder extracted exactly to the following directory (respect the lowercase letters):</p>
                                     <div class="relative mt-2">
-                                        <code class="block bg-slate-900 text-pink-400 p-3 md:p-4 rounded font-mono text-xs overflow-x-auto whitespace-pre-wrap break-all select-all cursor-pointer border border-slate-800" title="Seleziona tutto">Android/data/com.ea.games.r3_row/</code>
+                                        <code class="block bg-slate-900 text-pink-400 p-3 md:p-4 rounded font-mono text-xs overflow-x-auto whitespace-pre-wrap break-all select-all cursor-pointer border border-slate-800" title="Select all">Android/data/com.ea.games.r3_row/</code>
                                     </div>
+                                </div>            
+                            </div>
+                            <div class="flex gap-3 md:gap-4 items-start">
+                                <span class="font-bold text-blue-500 mono bg-blue-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">SH</span>
+                                <div class="w-full min-w-0 pt-0.5">
+                                    <p class="text-xs md:text-sm font-bold text-slate-800 uppercase mb-1" data-i18n="shizuku-title">Advanced: Shizuku Method</p>
+                                    <p class="text-xs md:text-sm" id="shizuku-text">On Android 11+, standard file managers may be restricted. Use <strong class="text-blue-600">FV File Explorer</strong> or <strong class="text-blue-600">ZArchiver</strong> paired with <a href='https://github.com/RikkaApps/Shizuku' class='text-blue-600 underline font-semibold'>Shizuku</a> to gain elevated permissions and write directly into the <code class="bg-slate-100 px-1 rounded">/data/</code> folder.</p>
                                 </div>
                             </div>
                             <div class="flex gap-3 md:gap-4 items-start">
                                 <span class="font-bold text-blue-500 mono bg-blue-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">04</span>
                                 <div class="pt-0.5">
-                                    <p>Start the game to verify the integrity of the data.</p>
-                                    <p class="text-[11px] md:text-xs text-rose-600 font-semibold mt-1.5 uppercase tracking-wider">Note: Online features and the game cloud are permanently disabled.</p>
+                                    <p data-i18n="step-4-text">Start the game to verify the integrity of the data.</p>
+                                    <p class="text-[11px] md:text-xs text-rose-600 font-semibold mt-1.5 uppercase tracking-wider" id="step-4-note">Note: Online features and the game cloud are permanently disabled. To activate them try: <a href="https://github.com/steve84966/RealRacingPin" class="text-blue-600 underline font-semibold" target="_blank">RealRacingPin</a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div id="saves" class="material-card p-5 md:p-10 border-l-4 md:border-l-8 border-amber-500 bg-amber-50/20">
-                        <h3 class="text-amber-700 font-bold uppercase tracking-tighter text-xs md:text-sm mb-4 mono">#02_Save_Management</h3>
+                        <h3 class="text-amber-700 font-bold uppercase tracking-tighter text-xs md:text-sm mb-4 mono" data-i18n="section-saves">#02_Save_Management</h3>
                         <div class="bg-amber-500/10 border border-amber-500/20 p-3 md:p-4 rounded mb-4">
-                            <p class="text-[10px] md:text-xs text-amber-800 font-bold uppercase tracking-wider">Loss data risk</p>
-                            <p class="text-xs md:text-sm text-slate-700 mt-1">Without cloud synchronization, your progress is stored exclusively on the device. If you delete the data or the application, you will lose everything in an irreversible manner.</p>
+                            <p class="text-[10px] md:text-xs text-amber-800 font-bold uppercase tracking-wider" data-i18n="save-risk-title">Loss data risk</p>
+                            <p class="text-xs md:text-sm text-slate-700 mt-1" data-i18n="save-risk-desc">Without cloud synchronization, your progress is stored exclusively on the device. If you delete the data or the application, you will lose everything in an irreversible manner.</p>
                         </div>
-                        <p class="text-slate-700 text-xs md:text-sm">
+                        <p class="text-slate-700 text-xs md:text-sm" data-i18n="save-path-text">
                             Your local saves are located within the <code class="bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-mono text-xs">doc</code> folder in the path:
                         </p>
                         <div class="relative mt-2">
-                            <code class="block bg-slate-900 text-amber-400 p-3 md:p-4 rounded font-mono text-xs overflow-x-auto whitespace-pre-wrap break-all select-all cursor-pointer border border-slate-800" title="Seleziona tutto">Android/data/com.ea.games.r3_row/files/doc/</code>
+                            <code class="block bg-slate-900 text-amber-400 p-3 md:p-4 rounded font-mono text-xs overflow-x-auto whitespace-pre-wrap break-all select-all cursor-pointer border border-slate-800" title="Select all">Android/data/com.ea.games.r3_row/files/doc/</code>
                         </div>
                     </div>
                 </section>
                 <aside id="downloads" class="space-y-6 order-1 lg:order-2">
                     <div class="material-card p-5 md:p-8 bg-[#0A192F] text-white">
-                        <h3 class="text-blue-400 font-bold uppercase tracking-tighter text-xs md:text-sm mb-6 mono">Secure_Mirrors</h3>
+                        <h3 class="text-blue-400 font-bold uppercase tracking-tighter text-xs md:text-sm mb-6 mono" data-i18n="side-mirrors-title">Secure_Mirrors</h3>
                         <div class="space-y-4">
-                            <div>
-                                <a href="https://mega.nz/folder/1qpUXByZ#K4nvGCnWTpBAYDlFnKa1Ag" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group active:bg-blue-600">
+                            <div class="mb-6">
+                                <p class="text-[10px] font-bold text-blue-400 uppercase mb-3 tracking-widest mono" data-i18n="side-app-package">01_Application_Package</p>
+                                <a href="https://archive.org/details/real-racing-3_14.0.1" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group mb-2">
+                                    <span class="font-medium text-sm md:text-base">APK v14.0.1</span>
+                                    <span class="text-[10px] font-bold tracking-wider bg-blue-500 px-2 py-1 rounded">APK</span>
+                                </a>
+                                <div class="mt-2 px-1 text-[9px] md:text-[10px] font-mono text-slate-400 break-all">
+                                    <span class="block uppercase font-bold text-[8px] text-blue-400 mb-0.5" data-i18n="checksum-title-apk">APK Checksum:</span>
+                                    <span id="checksum-value-apk">724103c66b32c1c782a52eae686d5ae4ee85581b860be7015f6b45d84829c9c5</span>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <p class="text-[10px] font-bold text-blue-400 uppercase mb-3 tracking-widest mono" data-i18n="side-game-assets">02_Game_Data_Assets</p>
+                                <div class="grid grid-cols-2 gap-2 mb-4">
+                                    <button id="btn-adreno" onclick="switchGPU('adreno')" class="p-3 bg-blue-600 border border-blue-500 rounded text-center transition cursor-pointer focus:outline-none w-full">
+                                        <span class="block text-[10px] text-blue-200 uppercase mb-1" data-i18n="gpu-type">GPU Type</span>
+                                        <span class="font-bold text-sm text-white">ADRENO</span>
+                                    </button>
+                                    <button id="btn-mali" onclick="switchGPU('mali')" class="p-3 bg-white/5 border border-white/10 rounded text-center transition cursor-pointer focus:outline-none w-full hover:bg-white/10">
+                                        <span class="block text-[10px] text-slate-400 uppercase mb-1" data-i18n="gpu-type">GPU Type</span>
+                                        <span class="font-bold text-sm text-slate-300">MALI</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="text-[10px] font-bold text-blue-400 uppercase mb-3 tracking-widest mono" data-i18n="mirror-select">03_Mirror_Selection</p>
+                            <div class="space-y-2">
+                                <a id="mirror-internetarchive" href="#" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group active:bg-blue-600">
+                                    <span class="font-medium text-sm md:text-base">Internet Archive</span>
+                                    <span class="text-[10px] md:text-xs font-bold tracking-wider opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity bg-blue-500 lg:bg-transparent px-2 py-1 lg:p-0 rounded" data-i18n="dl-action">DOWNLOAD</span>
+                                </a>
+                                <a id="mirror-mega" href="#" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group active:bg-blue-600">
                                     <span class="font-medium text-sm md:text-base">Mega.nz</span>
-                                    <span class="text-[10px] md:text-xs font-bold tracking-wider opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity bg-blue-500 lg:bg-transparent px-2 py-1 lg:p-0 rounded">DOWNLOAD</span>
+                                    <span class="text-[10px] md:text-xs font-bold tracking-wider opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity bg-blue-500 lg:bg-transparent px-2 py-1 lg:p-0 rounded" data-i18n="dl-action">DOWNLOAD</span>
                                 </a>
-                                <a href="https://www.mediafire.com/folder/y2tj5mg8064kv/Project_RR3" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group active:bg-blue-600">
-                                    <span class="font-medium text-sm md:text-base">Mediafire</span>
-                                    <span class="text-[10px] md:text-xs font-bold tracking-wider opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity bg-blue-500 lg:bg-transparent px-2 py-1 lg:p-0 rounded">DOWNLOAD</span>
-                                </a>
-                                <a href="https://e.pcloud.link/publink/show?code=kZpscrZnm1pdSrxi1VcY5PDQ5hXX0aWXEDV" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group active:bg-blue-600">
-                                    <span class="font-medium text-sm md:text-base">pCloud</span>
-                                    <span class="text-[10px] md:text-xs font-bold tracking-wider opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity bg-blue-500 lg:bg-transparent px-2 py-1 lg:p-0 rounded">DOWNLOAD</span>
-                                </a>
-                                <div class="mt-2 px-1 text-[9px] md:text-[10px] font-mono text-slate-400 break-all" title="SHA-256 Checksum">
-                                    SHA256: 1dd8f7f3291f0aae7230006d019e0d7bdc3ddfaf26e7347707b935aca6c8a659
+                                <div class="mt-2 px-1 text-[9px] md:text-[10px] font-mono text-slate-400 break-all">
+                                    <span class="block uppercase font-bold text-[8px] text-blue-400 mb-0.5" data-i18n="checksum-title">Data Checksum:</span>
+                                    <span id="checksum-value">Loading...</span>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-8 md:mt-10 p-3 md:p-4 bg-yellow-500/10 border border-yellow-500/20 rounded">
-                            <p class="text-[9px] md:text-[10px] text-yellow-200 uppercase font-bold tracking-wider">Storage Notice</p>
-                            <p class="text-[10px] md:text-[11px] text-yellow-100/60 mt-1">These files are provided exclusively for historical preservation and research purposes. The author assumes no responsibility for improper use.</p>
+                            <p class="text-[9px] md:text-[10px] text-yellow-200 uppercase font-bold tracking-wider" data-i18n="notice-title">Storage Notice</p>
+                            <p class="text-[10px] md:text-[11px] text-yellow-100/60 mt-1" data-i18n="notice-desc">These files are provided exclusively for historical preservation and research purposes. The author assumes no responsibility for improper use.</p>
                         </div>
                     </div>
                 </aside>
-
             </div>
         </main>
         <script data-goatcounter="https://viduxsh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+        <script>
+            let currentLanguage = 'en';
+            let currentGPUType = 'adreno';
+
+            const translations = {
+                en: {
+                    "nav-creator": "Creator",
+                    "nav-report": "Report an Issue",
+                    "hero-title": "Keep the Race <span class='text-blue-500 italic'>Alive</span>.",
+                    "hero-desc": "Repository dedicated to the preservation of the Android version of Real Racing 3, ensuring that this iconic mobile racing game remains accessible for future generations of players and enthusiasts.",
+                    "btn-downloads": "Downloads",
+                    "btn-tutorial": "Tutorial",
+                    "section-installation": "#01_Installation_Protocol",
+                    "step-1-html": "Download the game files <a href='#downloads' class='text-blue-600 underline font-semibold'>Downloads</a> (Adreno or Mali).",
+                    "step-1-note": "Note: check you device GPU by using software (AIDA64) or hardware specifications.",
+                    "step-2-text": "Install the APK. Important: open the game once to allow the system to generate the initial folder structure, then force close the application immediately.",
+                    "step-3-text": "Use a file manager to move the entire game data folder extracted exactly to the following directory (respect the lowercase letters):",
+                    "shizuku-title": "Advanced: Shizuku Method",
+                    "shizuku-html": "On Android 11+, standard file managers may be restricted. Use <strong class='text-blue-600'>FV File Explorer</strong> or <strong class='text-blue-600'>ZArchiver</strong> paired with <a href='https://github.com/RikkaApps/Shizuku' class='text-blue-600 underline font-semibold'>Shizuku</a> to gain elevated permissions and write directly into the <code class='bg-slate-100 px-1 rounded'>/data/</code> folder.",
+                    "step-4-text": "Start the game to verify the integrity of the data.",
+                    "step-4-html": "Note: Online features and the game cloud are permanently disabled. To activate them try: <a href='https://github.com/steve84966/RealRacingPin' class='text-blue-600 underline font-semibold' target='_blank'>RealRacingPin</a>",
+                    "section-saves": "#02_Save_Management",
+                    "save-risk-title": "Loss data risk",
+                    "save-risk-desc": "Without cloud synchronization, your progress is stored exclusively on the device. If you delete the data or the application, you will lose everything in an irreversible manner.",
+                    "save-path-text": "Your local saves are located within the doc folder in the path:",
+                    "side-mirrors-title": "Secure_Mirrors",
+                    "side-app-package": "01_Application_Package",
+                    "checksum-title": "Data Checksum:",
+                    "side-game-assets": "02_Game_Data_Assets",
+                    "gpu-type": "GPU Type",
+                    "mirror-select": "03_Mirror_Selection",
+                    "dl-action": "DOWNLOAD",
+                    "notice-title": "Storage Notice",
+                    "notice-desc": "These files are provided exclusively for historical preservation and research purposes. The author assumes no responsibility for improper use.",
+                },
+                it: {
+                    "nav-creator": "Creatore",
+                    "nav-report": "Segnala un Problema",
+                    "hero-title": "Keep the Race <span class='text-blue-500 italic'>Alive</span>.",
+                    "hero-desc": "Repository dedicato alla preservazione della versione Android di Real Racing 3, garantendo che questo iconico gioco di corse mobile rimanga accessibile per le future generazioni di giocatori ed appassionati.",
+                    "btn-downloads": "Downloads",
+                    "btn-tutorial": "Tutorial",
+                    "section-installation": "#01_Protocollo_Installazione",
+                    "step-1-html": "Scarica i file del gioco dai <a href='#downloads' class='text-blue-600 underline font-semibold'>Downloads</a> (Adreno o Mali).",
+                    "step-1-note": "Nota: controlla la GPU del tuo dispositivo usando un software (AIDA64) o le specifiche hardware.",
+                    "step-2-text": "Installa l'APK. Importante: apri il gioco una volta per permettere al sistema di generare la struttura iniziale delle cartelle, poi forza la chiusura dell'applicazione immediatamente.",
+                    "step-3-text": "Usa un file manager per spostare l'intera cartella dei dati di gioco estratta esattamente nella seguente directory (rispetta le lettere minuscole):",
+                    "shizuku-title": "Avanzato: Metodo Shizuku",
+                    "shizuku-html": "Su Android 11+, i file manager standard potrebbero essere limitati. Usa <strong class='text-blue-600'>FV File Explorer</strong> o <strong class='text-blue-600'>ZArchiver</strong> abbinati a <a href='https://github.com/RikkaApps/Shizuku' class='text-blue-600 underline font-semibold'>Shizuku</a> per ottenere permessi elevati e scrivere direttamente nella cartella <code class='bg-slate-100 px-1 rounded'>/data/</code>.",
+                    "step-4-text": "Avvia il gioco per verificare l'integrità dei dati.",
+                    "step-4-html": "Nota: Le funzionalità online e il cloud di gioco sono permanentemente disabilitati. Per provare ad attivarli: <a href='https://github.com/steve84966/RealRacingPin' class='text-blue-600 underline font-semibold' target='_blank'>RealRacingPin</a>",
+                    "section-saves": "#02_Gestione_Salvataggi",
+                    "save-risk-title": "Rischio perdita dati",
+                    "save-risk-desc": "Senza la sincronizzazione cloud, i tuoi progressi sono memorizzati esclusivamente sul dispositivo. Se cancelli i dati o l'applicazione, la perdita sarà irreversibile.",
+                    "save-path-text": "I tuoi salvataggi locali si trovano all'interno della cartella doc nel percorso:",
+                    "side-mirrors-title": "Downloads_Sicuri",
+                    "side-app-package": "01_Pacchetto_Applicazione",
+                    "checksum-title": "Checksum Dati:",
+                    "side-game-assets": "02_Risorse_Dati_Gioco",
+                    "gpu-type": "Tipo GPU",
+                    "mirror-select": "03_Selezione_Specchio",
+                    "dl-action": "SCARICA",
+                    "notice-title": "Avviso di Conservazione",
+                    "notice-desc": "Questi file sono forniti esclusivamente a scopo di conservazione storica e ricerca. L'autore non si assume alcuna responsabilità per un uso improprio.",
+                },
+                es: {
+                    "nav-creator": "Creador",
+                    "nav-report": "Reportar un problema",
+                    "hero-title": "Keep the Race <span class='text-blue-500 italic'>Alive</span>.",
+                    "hero-desc": "Repositorio dedicado a la preservación de la versión para Android de Real Racing 3, garantizando que este icónico juego de carreras para móviles siga siendo accesible para las futuras generaciones de jugadores y entusiastas.",
+                    "btn-downloads": "Descargas",
+                    "btn-tutorial": "Tutorial",
+                    "section-installation": "#01_Protocolo_Instalación",
+                    "step-1-html": "Descarga los archivos del juego desde <a href='#downloads' class='text-blue-600 underline font-semibold'>Descargas</a> (Adreno o Mali).",
+                    "step-1-note": "Nota: comprueba la GPU de tu dispositivo mediante software (AIDA64) o especificaciones de hardware.",
+                    "step-2-text": "Instala el APK. Importante: abre el juego una vez para permitir que el sistema genere la estructura de carpetas inicial, luego fuerza el cierre de la aplicación inmediatamente.",
+                    "step-3-text": "Usa un administrador de archivos para mover toda la carpeta de datos extraída exactamente al siguiente directorio (respeta las letras minúsculas):",
+                    "shizuku-title": "Avanzado: Método Shizuku",
+                    "shizuku-html": "En Android 11+, los administradores de archivos estándar pueden estar restringidos. Usa <strong class='text-blue-600'>FV File Explorer</strong> o <strong class='text-blue-600'>ZArchiver</strong> junto con <a href='https://github.com/RikkaApps/Shizuku' class='text-blue-600 underline font-semibold'>Shizuku</a> para obtener permisos elevados y escribir directamente en la carpeta <code class='bg-slate-100 px-1 rounded'>/data/</code>.",
+                    "step-4-text": "Inicia el juego para verificar la integridad de los datos.",
+                    "step-4-html": "Nota: Las funciones en línea y la nube del juego están permanentemente deshabilitadas. Para intentar activarlas pruebe: <a href='https://github.com/steve84966/RealRacingPin' class='text-blue-600 underline font-semibold' target='_blank'>RealRacingPin</a>",
+                    "section-saves": "#02_Gestión_Saves",
+                    "save-risk-title": "Riesgo de pérdida de datos",
+                    "save-risk-desc": "Sin sincronización en la nube, tu progreso se almacena exclusivamente en el dispositivo. Si borras los datos o la aplicación, lo perderás todo de forma irreversible.",
+                    "save-path-text": "Tus archivos de guardado local se encuentran dentro de la carpeta doc en la ruta:",
+                    "side-mirrors-title": "Descarga_Segura",
+                    "side-app-package": "01_Paquete_Aplicación",
+                    "checksum-title": "Suma de Comprobación:",
+                    "side-game-assets": "02_Activos_Datos_Juego",
+                    "gpu-type": "Tipo GPU",
+                    "mirror-select": "03_Selección_de_Descarga",
+                    "dl-action": "DESCARGAR",
+                    "notice-title": "Aviso de Almacenamiento",
+                    "notice-desc": "Estos archivos se proporcionan exclusivamente con fines de investigación y preservación histórica. El autor no asume ninguna responsabilidad por el uso inadecuado.",
+                }
+            };
+
+            const gpuData = {
+                adreno: {
+                    internetarchive: "https://archive.org/details/com.ea.games.r3_row_ADRENO_14.0.1",
+                    mega: "https://mega.nz/file/Q2ggiKSR#GZ1CXOUCs4NoHBtOiGEWOT1wau1ebhBoz6yWWWxfQyI",
+                    sha256: "96dd087f4259c51d6eeed6a3a5c44861a77eb2a2912285e050ceb8ec6141a4ad"
+                },
+                mali: {
+                    internetarchive: "https://archive.org/details/com.ea.games.r3_row_MALI_14.0.1",
+                    mega: "https://mega.nz/file/JjZFiTRY#4_bh4sFIjW2uawhNMLX_73U4vwRKxO2tuIlGrl_diXQ",
+                    sha256: "17f8e17b0225305f85676e175aed01aa2ed44c79a9ed1df653c13f5d8e83d186"
+                }
+            };
+
+            function switchLanguage(lang) {
+                currentLanguage = lang;
+                document.documentElement.lang = lang;
+
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.innerText = translations[lang][key];
+                    }
+                });
+
+                if (translations[lang]) {
+                    document.getElementById('hero-title').innerHTML = translations[lang]['hero-title'];
+                    document.getElementById('step-1-text').innerHTML = translations[lang]['step-1-html'];
+                    document.getElementById('shizuku-text').innerHTML = translations[lang]['shizuku-html'];
+                    document.getElementById('step-4-note').innerHTML = translations[lang]['step-4-html'];
+                }
+
+                ['en', 'it', 'es'].forEach(l => {
+                    const btn = document.getElementById(`lang-${l}`);
+                    if (l === lang) {
+                        btn.className = "text-blue-400 font-bold bg-white/10 px-1 py-0.5 rounded focus:outline-none";
+                    } else {
+                        btn.className = "text-slate-400 hover:text-white transition px-1 py-0.5 rounded focus:outline-none";
+                    }
+                });
+
+                switchGPU(currentGPUType);
+            }
+
+            function switchGPU(type) {
+                currentGPUType = type;
+                const btnAdreno = document.getElementById('btn-adreno');
+                const btnMali = document.getElementById('btn-mali');
+                
+                const textAdrenoSub = btnAdreno.querySelector('span:first-child');
+                const textAdrenoMain = btnAdreno.querySelector('span:last-child');
+                const textMaliSub = btnMali.querySelector('span:first-child');
+                const textMaliMain = btnMali.querySelector('span:last-child');
+
+                if (type === 'adreno') {
+                    btnAdreno.className = "p-3 bg-blue-600 border border-blue-500 rounded text-center transition cursor-pointer focus:outline-none w-full";
+                    textAdrenoSub.className = "block text-[10px] text-blue-200 uppercase mb-1";
+                    textAdrenoMain.className = "font-bold text-sm text-white";
+
+                    btnMali.className = "p-3 bg-white/5 border border-white/10 rounded text-center transition cursor-pointer focus:outline-none w-full hover:bg-white/10";
+                    textMaliSub.className = "block text-[10px] text-slate-400 uppercase mb-1";
+                    textMaliMain.className = "font-bold text-sm text-slate-300";
+                } else {
+                    btnMali.className = "p-3 bg-blue-600 border border-blue-500 rounded text-center transition cursor-pointer focus:outline-none w-full";
+                    textMaliSub.className = "block text-[10px] text-blue-200 uppercase mb-1";
+                    textMaliMain.className = "font-bold text-sm text-white";
+
+                    btnAdreno.className = "p-3 bg-white/5 border border-white/10 rounded text-center transition cursor-pointer focus:outline-none w-full hover:bg-white/10";
+                    textAdrenoSub.className = "block text-[10px] text-slate-400 uppercase mb-1";
+                    textAdrenoMain.className = "font-bold text-sm text-slate-300";
+                }
+
+                document.getElementById('mirror-internetarchive').href = gpuData[type].internetarchive;
+                document.getElementById('mirror-mega').href = gpuData[type].mega;
+                document.getElementById('checksum-value').innerText = gpuData[type].sha256;
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                switchLanguage('en');
+            });
+        </script>
         <footer class="bg-white border-t border-slate-200 py-8 md:py-12 px-4">
             <div class="container mx-auto text-center">
                 <p class="text-slate-400 text-[10px] md:text-xs mono uppercase tracking-widest">
