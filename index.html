@@ -57,7 +57,7 @@
         <header class="hero-bg text-white py-16 md:py-32 px-4 md:px-8 shadow-inner">
             <div class="container mx-auto">
                 <div class="max-w-3xl">
-                    <div class="inline-block px-2.5 py-0.5 border border-blue-400 text-blue-400 text-[10px] md:text-xs font-bold mono mb-4 md:mb-6">VERSION_ANDROID_STABLE: 14.0.1</div>
+                    <div class="inline-block px-2.5 py-0.5 border border-blue-400 text-blue-400 text-[10px] md:text-xs font-bold mono mb-4 md:mb-6">VERSION_STABLE: 14.0.1</div>
                     <h2 class="text-4xl md:text-7xl font-bold mb-4 md:mb-6 leading-tight uppercase tracking-tighter" id="hero-title">
                         Keep the Race <span class="text-blue-500 italic">Alive</span>.
                     </h2>
@@ -78,7 +78,8 @@
         <main class="container mx-auto py-10 md:py-20 px-4 max-w-7xl">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <section id="tutorial" class="lg:col-span-2 space-y-6 md:space-y-8 order-2 lg:order-1">
-                    <div class="material-card p-5 md:p-10 border-l-4 md:border-l-8 border-blue-500">
+                    <!-- ANDROID SECTIONS -->
+                    <div id="android-sections" class="material-card p-5 md:p-10 border-l-4 md:border-l-8 border-blue-500">
                         <h3 class="text-blue-600 font-bold uppercase tracking-tighter text-xs md:text-sm mb-6 mono" data-i18n="section-installation">#01_Installation_Protocol</h3>
                         <div class="space-y-5 md:space-y-6 text-slate-700 text-sm md:text-base">
                             <div class="flex gap-3 md:gap-4 items-start">
@@ -119,7 +120,8 @@
                             </div>
                         </div>
                     </div>
-                    <div id="saves" class="material-card p-5 md:p-10 border-l-4 md:border-l-8 border-amber-500 bg-amber-50/20">
+                    <!-- ANDROID SAVES SECTIONS -->
+                    <div id="saves-section-android" class="material-card p-5 md:p-10 border-l-4 md:border-l-8 border-amber-500 bg-amber-50/20">
                         <h3 class="text-amber-700 font-bold uppercase tracking-tighter text-xs md:text-sm mb-4 mono" data-i18n="section-saves">#02_Save_Management</h3>
                         <div class="bg-amber-500/10 border border-amber-500/20 p-3 md:p-4 rounded mb-4">
                             <p class="text-[10px] md:text-xs text-amber-800 font-bold uppercase tracking-wider" data-i18n="save-risk-title">Loss data risk</p>
@@ -132,48 +134,126 @@
                             <code class="block bg-slate-900 text-amber-400 p-3 md:p-4 rounded font-mono text-xs overflow-x-auto whitespace-pre-wrap break-all select-all cursor-pointer border border-slate-800" title="Select all">Android/data/com.ea.games.r3_row/files/doc/</code>
                         </div>
                     </div>
+                    <!-- IOS SECTIONS -->
+                    <div id="ios-protocol" class="material-card p-5 md:p-10 border-l-4 md:border-l-8 border-purple-500 mt-8" style="display: none">
+                        <h3 class="text-purple-600 font-bold uppercase tracking-tighter text-xs md:text-sm mb-6 mono">#01_iOS_Protocol</h3>
+                        <div class="space-y-5 md:space-y-6 text-slate-700 text-sm md:text-base">
+                            <div class="flex gap-3 md:gap-4 items-start">
+                                <span class="font-bold text-purple-500 mono bg-purple-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">01</span>
+                                <div class="pt-0.5">
+                                    <p>Requirements: Computer (Win/Mac) for sideloading. iPhone 12 or newer. Sideloadly (recommended) or Legacy-iOS-kit for Linux.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 md:gap-4 items-start">
+                                <span class="font-bold text-purple-500 mono bg-purple-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">02</span>
+                                <div class="pt-0.5">
+                                    <p>Download the modified .ipa file and <code>Caches_ipastore.zip</code>. Place the .zip file locally on your iOS device.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 md:gap-4 items-start">
+                                <span class="font-bold text-purple-500 mono bg-purple-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">03</span>
+                                <div class="pt-0.5">
+                                    <p>Use <strong>Sideloadly</strong> to install the IPA. Launch the app, tap the floating icon in the asset download menu, and use the first function to import <code>Caches_ipastore.zip</code>.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-3 md:gap-4 items-start">
+                                <span class="font-bold text-purple-500 mono bg-purple-100 px-2 py-0.5 rounded text-xs md:text-sm flex-shrink-0">04</span>
+                                <div class="pt-0.5">
+                                    <p>Wait for completion, then force close and reopen the app. Remember: sideloading requires renewal every 7 days.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- IOS SAVES SECTIONS -->
+                    <div id="saves-section-ios" class="material-card p-5 md:p-10 border-l-4 md:border-l-8 border-amber-500 bg-amber-50/20" style="display:none;">
+                        <h3 class="text-amber-700 font-bold uppercase tracking-tighter text-xs md:text-sm mb-4 mono" data-i18n="section-saves">#02_Save_Management</h3>
+                        <div class="bg-amber-500/10 border border-amber-500/20 p-3 md:p-4 rounded mb-4">
+                            <p class="text-[10px] md:text-xs text-amber-800 font-bold uppercase tracking-wider" data-i18n="save-risk-title">Loss data risk</p>
+                            <p class="text-xs md:text-sm text-slate-700 mt-1" data-i18n="save-risk-desc">Without cloud synchronization, your progress is stored exclusively on the device. If you delete the data or the application, you will lose everything in an irreversible manner.</p>
+                        </div>
+                    </div>
                 </section>
                 <aside id="downloads" class="space-y-6 order-1 lg:order-2">
                     <div class="material-card p-5 md:p-8 bg-[#0A192F] text-white">
-                        <h3 class="text-blue-400 font-bold uppercase tracking-tighter text-xs md:text-sm mb-6 mono" data-i18n="side-mirrors-title">Secure_Mirrors</h3>
+                        <h3 class="text-blue-400 font-bold uppercase tracking-tighter text-xs md:text-sm mb-6 mono" data-i18n="side-mirrors-title">Secure_Mirrors: </h3>
+                        <h3 class="text-blue-400 font-bold uppercase tracking-tighter text-xs md:text-sm mb-6 mono">Downloads: <span id="visitor-count">Loading...</span></h3>
                         <div class="space-y-4">
-                            <div class="mb-6">
-                                <p class="text-[10px] font-bold text-blue-400 uppercase mb-3 tracking-widest mono" data-i18n="side-app-package">01_Application_Package</p>
-                                <a href="https://archive.org/details/real-racing-3_14.0.1" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group mb-2">
-                                    <span class="font-medium text-sm md:text-base">APK v14.0.1</span>
-                                    <span class="text-[10px] font-bold tracking-wider bg-blue-500 px-2 py-1 rounded">APK</span>
-                                </a>
-                                <div class="mt-2 px-1 text-[9px] md:text-[10px] font-mono text-slate-400 break-all">
-                                    <span class="block uppercase font-bold text-[8px] text-blue-400 mb-0.5" data-i18n="checksum-title-apk">APK Checksum:</span>
-                                    <span id="checksum-value-apk">724103c66b32c1c782a52eae686d5ae4ee85581b860be7015f6b45d84829c9c5</span>
+                            <!-- OS Toggle Buttons -->
+                            <div class="grid grid-cols-2 gap-2">
+                                <button id="btn-android" onclick="switchOS('android')" class="p-3 bg-blue-600 border border-blue-500 rounded text-center transition cursor-pointer focus:outline-none w-full">
+                                    <span class="block text-[10px] text-blue-200 uppercase mb-1">OS Type</span>
+                                    <span class="font-bold text-sm text-white">ANDROID</span>
+                                </button>
+                                <button id="btn-ios" onclick="switchOS('ios')" class="p-3 bg-white/5 border border-white/10 rounded text-center transition cursor-pointer focus:outline-none w-full hover:bg-white/10">
+                                    <span class="block text-[10px] text-slate-400 uppercase mb-1">OS Type</span>
+                                    <span class="font-bold text-sm text-slate-300">IOS</span>
+                                </button>
+                            </div>
+                            <!-- ANDROID PANEL -->
+                            <div id="panel-android">
+                                <div class="mb-6">
+                                    <p class="text-[10px] font-bold text-blue-400 uppercase mb-3 tracking-widest mono" data-i18n="side-app-package">01_Application_Package</p>
+                                    <a href="https://archive.org/details/real-racing-3_14.0.1" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group mb-2">
+                                        <span class="font-medium text-sm md:text-base">APK v14.0.1</span>
+                                        <span class="text-[10px] font-bold tracking-wider bg-blue-500 px-2 py-1 rounded">APK</span>
+                                    </a>
+                                    <div class="mt-2 px-1 text-[9px] md:text-[10px] font-mono text-slate-400 break-all">
+                                        <span class="block uppercase font-bold text-[8px] text-blue-400 mb-0.5" data-i18n="checksum-title-apk">APK Checksum:</span>
+                                        <span id="checksum-value-apk">724103c66b32c1c782a52eae686d5ae4ee85581b860be7015f6b45d84829c9c5</span>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <p class="text-[10px] font-bold text-blue-400 uppercase mb-3 tracking-widest mono" data-i18n="side-game-assets">02_Game_Data_Assets</p>
+                                    <div class="grid grid-cols-2 gap-2 mb-4">
+                                        <button id="btn-adreno" onclick="switchGPU('adreno')" class="p-3 bg-blue-600 border border-blue-500 rounded text-center transition cursor-pointer focus:outline-none w-full">
+                                            <span class="block text-[10px] text-blue-200 uppercase mb-1" data-i18n="gpu-type">GPU Type</span>
+                                            <span class="font-bold text-sm text-white">ADRENO</span>
+                                        </button>
+                                        <button id="btn-mali" onclick="switchGPU('mali')" class="p-3 bg-white/5 border border-white/10 rounded text-center transition cursor-pointer focus:outline-none w-full hover:bg-white/10">
+                                            <span class="block text-[10px] text-slate-400 uppercase mb-1" data-i18n="gpu-type">GPU Type</span>
+                                            <span class="font-bold text-sm text-slate-300">MALI</span>
+                                        </button>
+                                    </div>
+                                    <div class="mt-2 px-1 text-[9px] md:text-[10px] font-mono text-slate-400 break-all">
+                                        <span class="block uppercase font-bold text-[8px] text-blue-400 mb-0.5" data-i18n="checksum-title-apk">Data Checksum:</span>
+                                        <span id="checksum-value"></span>
+                                    </div>
+                                </div>
+                                <p class="text-[10px] font-bold text-blue-400 uppercase mb-3 tracking-widest mono" data-i18n="mirror-select">03_Mirror_Selection</p>
+                                <div class="space-y-2">
+                                    <a id="mirror-internetarchive" href="#" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group active:bg-blue-600">
+                                        <span class="font-medium text-sm md:text-base">Internet Archive</span>
+                                        <span class="text-[10px] md:text-xs font-bold tracking-wider opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity bg-blue-500 lg:bg-transparent px-2 py-1 lg:p-0 rounded" data-i18n="dl-action">DOWNLOAD</span>
+                                    </a>
+                                    <a id="mirror-mega" href="#" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group active:bg-blue-600">
+                                        <span class="font-medium text-sm md:text-base">Mega.nz</span>
+                                        <span class="text-[10px] md:text-xs font-bold tracking-wider opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity bg-blue-500 lg:bg-transparent px-2 py-1 lg:p-0 rounded" data-i18n="dl-action">DOWNLOAD</span>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="mb-6">
-                                <p class="text-[10px] font-bold text-blue-400 uppercase mb-3 tracking-widest mono" data-i18n="side-game-assets">02_Game_Data_Assets</p>
-                                <div class="grid grid-cols-2 gap-2 mb-4">
-                                    <button id="btn-adreno" onclick="switchGPU('adreno')" class="p-3 bg-blue-600 border border-blue-500 rounded text-center transition cursor-pointer focus:outline-none w-full">
-                                        <span class="block text-[10px] text-blue-200 uppercase mb-1" data-i18n="gpu-type">GPU Type</span>
-                                        <span class="font-bold text-sm text-white">ADRENO</span>
-                                    </button>
-                                    <button id="btn-mali" onclick="switchGPU('mali')" class="p-3 bg-white/5 border border-white/10 rounded text-center transition cursor-pointer focus:outline-none w-full hover:bg-white/10">
-                                        <span class="block text-[10px] text-slate-400 uppercase mb-1" data-i18n="gpu-type">GPU Type</span>
-                                        <span class="font-bold text-sm text-slate-300">MALI</span>
-                                    </button>
+                            <!-- IOS PANEL -->
+                            <div id="panel-ios" style="display:none;">
+                                <div class="mb-6">
+                                    <p class="text-[10px] font-bold text-purple-400 uppercase mb-3 tracking-widest mono">01_IPA_Package</p>
+                                    <a href="#" target="_blank" id="ios-ipa-link" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-purple-600 transition group mb-2">
+                                        <span class="font-medium text-sm md:text-base">IPA v14.0.1</span>
+                                        <span class="text-[10px] font-bold tracking-wider bg-purple-500 px-2 py-1 rounded">IPA</span>
+                                    </a>
+                                    <div class="mt-2 px-1 text-[9px] md:text-[10px] font-mono text-slate-400 break-all">
+                                        <span class="block uppercase font-bold text-[8px] text-blue-400 mb-0.5" data-i18n="checksum-title-apk">IPA Checksum:</span>
+                                        <span id="checksum-value-ipa">74c8e4c208b0cbcff2d232499f80ab72685a614c1b1c60847338055143c5ff4f</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <p class="text-[10px] font-bold text-blue-400 uppercase mb-3 tracking-widest mono" data-i18n="mirror-select">03_Mirror_Selection</p>
-                            <div class="space-y-2">
-                                <a id="mirror-internetarchive" href="#" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group active:bg-blue-600">
-                                    <span class="font-medium text-sm md:text-base">Internet Archive</span>
-                                    <span class="text-[10px] md:text-xs font-bold tracking-wider opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity bg-blue-500 lg:bg-transparent px-2 py-1 lg:p-0 rounded" data-i18n="dl-action">DOWNLOAD</span>
-                                </a>
-                                <a id="mirror-mega" href="#" target="_blank" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-blue-600 transition group active:bg-blue-600">
-                                    <span class="font-medium text-sm md:text-base">Mega.nz</span>
-                                    <span class="text-[10px] md:text-xs font-bold tracking-wider opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity bg-blue-500 lg:bg-transparent px-2 py-1 lg:p-0 rounded" data-i18n="dl-action">DOWNLOAD</span>
-                                </a>
-                                <div class="mt-2 px-1 text-[9px] md:text-[10px] font-mono text-slate-400 break-all">
-                                    <span class="block uppercase font-bold text-[8px] text-blue-400 mb-0.5" data-i18n="checksum-title">Data Checksum:</span>
-                                    <span id="checksum-value">Loading...</span>
+                                <div class="mb-4">
+                                    <p class="text-[10px] font-bold text-purple-400 uppercase mb-3 tracking-widest mono">02_Game_Assets</p>
+                                    <a href="#" target="_blank" id="ios-assets-link" class="flex justify-between items-center p-4 bg-white/5 border border-white/10 rounded hover:bg-purple-600 transition group">
+                                        <span class="font-medium text-sm md:text-base">Caches_ipastore.zip</span>
+                                        <span class="text-[10px] md:text-xs font-bold tracking-wider opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity bg-purple-500 lg:bg-transparent px-2 py-1 lg:p-0 rounded" data-i18n="dl-action">DOWNLOAD</span>
+                                    </a>
+                                    <div class="mt-2 px-1 text-[9px] md:text-[10px] font-mono text-slate-400 break-all">
+                                        <span class="block uppercase font-bold text-[8px] text-blue-400 mb-0.5" data-i18n="checksum-title-apk">Cache Checksum:</span>
+                                        <span id="checksum-value-cache">96aeb92f1bb6c5ddee73e1a5fb2f4b33ef2e5a5e03fd86380b847cd771a7fc8e</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -188,6 +268,7 @@
         <script data-goatcounter="https://viduxsh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
         <script>
             let currentLanguage = 'en';
+            let currentOSType = 'android';
             let currentGPUType = 'adreno';
 
             const translations = {
@@ -220,6 +301,11 @@
                     "dl-action": "DOWNLOAD",
                     "notice-title": "Storage Notice",
                     "notice-desc": "These files are provided exclusively for historical preservation and research purposes. The author assumes no responsibility for improper use.",
+                    "section-ios": "#01_iOS_Protocol",
+                    "ios-req": "Requirements: Computer (Win/Mac) for sideloading. iPhone 12 or newer. Sideloadly (recommended) or Legacy-iOS-kit for Linux.",
+                    "ios-step-2": "Download the modified .ipa file and <code>Caches_ipastore.zip</code>. Place the .zip file locally on your iOS device.",
+                    "ios-step-3": "Use <strong>Sideloadly</strong> to install the IPA. Launch the app, tap the floating icon in the asset download menu, and use the first function to import <code>Caches_ipastore.zip</code>.",
+                    "ios-step-4": "Wait for completion, then force close and reopen the app. Remember: sideloading requires renewal every 7 days."
                 },
                 it: {
                     "nav-creator": "Creatore",
@@ -249,7 +335,12 @@
                     "mirror-select": "03_Selezione_Specchio",
                     "dl-action": "SCARICA",
                     "notice-title": "Avviso di Conservazione",
-                    "notice-desc": "Questi file sono forniti esclusivamente a scopo di conservazione storica e ricerca. L'autore non si assume alcuna responsabilità per un uso improprio.",
+                    "notice-desc": "Questi file sono forniti esclusivamente a scopo di conservazione storica e ricerca. L'autore non si assume alcuna responsabilità per un uso improprio.",        
+                    "section-ios": "#01_Protocollo_iOS",
+                    "ios-req": "Requisiti: Computer (Win/Mac) per sideloading. iPhone 12 o più recente. Sideloadly (consigliato) o Legacy-iOS-kit per Linux.",
+                    "ios-step-2": "Scarica il file .ipa modificato e <code>Caches_ipastore.zip</code>. Posiziona il file .zip localmente sul tuo dispositivo iOS.",
+                    "ios-step-3": "Usa <strong>Sideloadly</strong> per installare l'IPA. Avvia l'app, tocca l'icona flottante nel menu di download degli asset e usa la prima funzione per importare <code>Caches_ipastore.zip</code>.",
+                    "ios-step-4": "Attendi il completamento, quindi forza la chiusura e riapri l'app. Ricorda: il sideload necessita di rinnovo ogni 7 giorni."
                 },
                 es: {
                     "nav-creator": "Creador",
@@ -280,19 +371,11 @@
                     "dl-action": "DESCARGAR",
                     "notice-title": "Aviso de Almacenamiento",
                     "notice-desc": "Estos archivos se proporcionan exclusivamente con fines de investigación y preservación histórica. El autor no asume ninguna responsabilidad por el uso inadecuado.",
-                }
-            };
-
-            const gpuData = {
-                adreno: {
-                    internetarchive: "https://archive.org/details/com.ea.games.r3_row_ADRENO_14.0.1",
-                    mega: "https://mega.nz/file/Q2ggiKSR#GZ1CXOUCs4NoHBtOiGEWOT1wau1ebhBoz6yWWWxfQyI",
-                    sha256: "96dd087f4259c51d6eeed6a3a5c44861a77eb2a2912285e050ceb8ec6141a4ad"
-                },
-                mali: {
-                    internetarchive: "https://archive.org/details/com.ea.games.r3_row_MALI_14.0.1",
-                    mega: "https://mega.nz/file/JjZFiTRY#4_bh4sFIjW2uawhNMLX_73U4vwRKxO2tuIlGrl_diXQ",
-                    sha256: "17f8e17b0225305f85676e175aed01aa2ed44c79a9ed1df653c13f5d8e83d186"
+                    "section-ios": "#01_Protocolo_iOS",
+                    "ios-req": "Requisitos: Ordenador (Win/Mac) para sideloading. iPhone 12 o más reciente. Sideloadly (recomendado) o Legacy-iOS-kit para Linux.",
+                    "ios-step-2": "Descarga el archivo .ipa modificado y <code>Caches_ipastore.zip</code>. Coloca el archivo .zip localmente en tu dispositivo iOS.",
+                    "ios-step-3": "Usa <strong>Sideloadly</strong> para instalar el IPA. Inicia la aplicación, toca el icono flotante en el menú de descarga de recursos y usa la primera función para importar <code>Caches_ipastore.zip</code>.",
+                    "ios-step-4": "Espera a que se complete, luego fuerza el cierre y vuelve a abrir la aplicación. Recuerda: el sideload requiere renovación cada 7 días."
                 }
             };
 
@@ -312,6 +395,11 @@
                     document.getElementById('step-1-text').innerHTML = translations[lang]['step-1-html'];
                     document.getElementById('shizuku-text').innerHTML = translations[lang]['shizuku-html'];
                     document.getElementById('step-4-note').innerHTML = translations[lang]['step-4-html'];
+                    document.querySelector('#ios-protocol h3').innerText = translations[lang]['section-ios'];
+                    document.querySelectorAll('#ios-protocol p')[0].innerHTML = translations[lang]['ios-req'];
+                    document.querySelectorAll('#ios-protocol p')[1].innerHTML = translations[lang]['ios-step-2'];
+                    document.querySelectorAll('#ios-protocol p')[2].innerHTML = translations[lang]['ios-step-3'];
+                    document.querySelectorAll('#ios-protocol p')[3].innerHTML = translations[lang]['ios-step-4'];
                 }
 
                 ['en', 'it', 'es'].forEach(l => {
@@ -325,6 +413,82 @@
 
                 switchGPU(currentGPUType);
             }
+            
+            const gpuData = {
+                adreno: {
+                    internetarchive: "https://archive.org/details/com.ea.games.r3_row_ADRENO_14.0.1",
+                    mega: "https://mega.nz/file/Q2ggiKSR#GZ1CXOUCs4NoHBtOiGEWOT1wau1ebhBoz6yWWWxfQyI",
+                    sha256: "96dd087f4259c51d6eeed6a3a5c44861a77eb2a2912285e050ceb8ec6141a4ad"
+                },
+                mali: {
+                    internetarchive: "https://archive.org/details/com.ea.games.r3_row_MALI_14.0.1",
+                    mega: "https://mega.nz/file/JjZFiTRY#4_bh4sFIjW2uawhNMLX_73U4vwRKxO2tuIlGrl_diXQ",
+                    sha256: "17f8e17b0225305f85676e175aed01aa2ed44c79a9ed1df653c13f5d8e83d186"
+                }
+            };
+
+            const iosData = {
+                ipa: "https://mega.nz/file/16ggyJDA#-d9U3IlB9F8OkLTOu0ZAD09JQi_D2oK_LvojejMVwOo",
+                assets: "https://mega.nz/file/NuhjFb4Z#BXrUfBgG5azePXzFve78BD1_oSnfjTfBW2QVaOkVLgA"
+            };
+
+            function switchOS(type) {
+                currentOSType = type;
+
+                const androidSections = document.getElementById('android-sections');
+                const savesSectionsAndroid = document.getElementById('saves-section-android');
+                const iosProtocol = document.getElementById('ios-protocol');
+                const savesSectionsIos = document.getElementById('saves-section-ios');
+    
+                const btnAndroid = document.getElementById('btn-android');
+                const btnIOS = document.getElementById('btn-ios');
+                const panelAndroid = document.getElementById('panel-android');
+                const panelIOS = document.getElementById('panel-ios');
+
+                const textAndroidSub = btnAndroid.querySelector('span:first-child');
+                const textAndroidMain = btnAndroid.querySelector('span:last-child');
+                const textIOSSub = btnIOS.querySelector('span:first-child');
+                const textIOSMain = btnIOS.querySelector('span:last-child');
+
+                if (type === 'android') {
+                    // Android button active
+                    btnAndroid.className = "p-3 bg-blue-600 border border-blue-500 rounded text-center transition cursor-pointer focus:outline-none w-full";
+                    textAndroidSub.className = "block text-[10px] text-blue-200 uppercase mb-1";
+                    textAndroidMain.className = "font-bold text-sm text-white";
+                    // iOS button inactive
+                    btnIOS.className = "p-3 bg-white/5 border border-white/10 rounded text-center transition cursor-pointer focus:outline-none w-full hover:bg-white/10";
+                    textIOSSub.className = "block text-[10px] text-slate-400 uppercase mb-1";
+                    textIOSMain.className = "font-bold text-sm text-slate-300";
+                    // Show/hide panels
+                    panelAndroid.style.display = 'block';
+                    androidSections.style.display = 'block';
+                    savesSectionsAndroid.style.display = 'block';
+                    panelIOS.style.display = 'none';
+                    iosProtocol.style.display = 'none';
+                    savesSectionsIos.style.display = 'none';
+                    // Refresh GPU links
+                    switchGPU(currentGPUType);
+                } else {
+                    // iOS button active
+                    btnIOS.className = "p-3 bg-purple-600 border border-purple-500 rounded text-center transition cursor-pointer focus:outline-none w-full";
+                    textIOSSub.className = "block text-[10px] text-purple-200 uppercase mb-1";
+                    textIOSMain.className = "font-bold text-sm text-white";
+                    // Android button inactive
+                    btnAndroid.className = "p-3 bg-white/5 border border-white/10 rounded text-center transition cursor-pointer focus:outline-none w-full hover:bg-white/10";
+                    textAndroidSub.className = "block text-[10px] text-slate-400 uppercase mb-1";
+                    textAndroidMain.className = "font-bold text-sm text-slate-300";
+                    // Show/hide panels
+                    panelAndroid.style.display = 'none';
+                    androidSections.style.display = 'none';
+                    savesSectionsAndroid.style.display = 'none';
+                    panelIOS.style.display = 'block';
+                    iosProtocol.style.display = 'block';
+                    savesSectionsIos.style.display = 'block';
+                    // Set iOS links
+                    document.getElementById('ios-ipa-link').href = iosData.ipa;
+                    document.getElementById('ios-assets-link').href = iosData.assets;
+                }
+            }
 
             function switchGPU(type) {
                 currentGPUType = type;
@@ -337,23 +501,28 @@
                 const textMaliMain = btnMali.querySelector('span:last-child');
 
                 if (type === 'adreno') {
+                    // Show Adreno
                     btnAdreno.className = "p-3 bg-blue-600 border border-blue-500 rounded text-center transition cursor-pointer focus:outline-none w-full";
                     textAdrenoSub.className = "block text-[10px] text-blue-200 uppercase mb-1";
                     textAdrenoMain.className = "font-bold text-sm text-white";
 
+                    // Hide Mali
                     btnMali.className = "p-3 bg-white/5 border border-white/10 rounded text-center transition cursor-pointer focus:outline-none w-full hover:bg-white/10";
                     textMaliSub.className = "block text-[10px] text-slate-400 uppercase mb-1";
                     textMaliMain.className = "font-bold text-sm text-slate-300";
                 } else {
+                    // Show Mali
                     btnMali.className = "p-3 bg-blue-600 border border-blue-500 rounded text-center transition cursor-pointer focus:outline-none w-full";
                     textMaliSub.className = "block text-[10px] text-blue-200 uppercase mb-1";
                     textMaliMain.className = "font-bold text-sm text-white";
 
+                    // Hide Adreno
                     btnAdreno.className = "p-3 bg-white/5 border border-white/10 rounded text-center transition cursor-pointer focus:outline-none w-full hover:bg-white/10";
                     textAdrenoSub.className = "block text-[10px] text-slate-400 uppercase mb-1";
                     textAdrenoMain.className = "font-bold text-sm text-slate-300";
                 }
 
+                // Refresh datas
                 document.getElementById('mirror-internetarchive').href = gpuData[type].internetarchive;
                 document.getElementById('mirror-mega').href = gpuData[type].mega;
                 document.getElementById('checksum-value').innerText = gpuData[type].sha256;
@@ -363,10 +532,23 @@
                 switchLanguage('en');
             });
         </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                fetch('https://viduxsh.goatcounter.com/counter/Project_RR3.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('visitor-count').innerText = data.count.replace(/\u00A0/g, ' ');
+                    })
+                    .catch(err => {
+                        console.error('Error fetching:', err);
+                        document.getElementById('visitor-count').innerText = "N/A";
+                    });
+            });
+        </script>
         <footer class="bg-white border-t border-slate-200 py-8 md:py-12 px-4">
             <div class="container mx-auto text-center">
                 <p class="text-slate-400 text-[10px] md:text-xs mono uppercase tracking-widest">
-                    &copy; 2026 Project_RR3
+                    &copy; 2026 Project_RR3, v2026.06.28
                 </p>
             </div>
         </footer>
